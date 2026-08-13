@@ -1,13 +1,13 @@
 import json
 import os
 
-# Real-world data based on YÖK Atlas statistics for Istanbul Universities (Devlet and Vakıf)
-# Covering quotas, gender ratios, phone, address, and 3-year historical comparisons (2023, 2024, 2025)
+# Expanded database for whichuni including city, faculty, new universities, and Giresun
 UNIVERSITIES_DATA = [
     {
         "id": "bogazici",
         "name": "Boğaziçi Üniversitesi",
         "type": "Devlet",
+        "city": "İstanbul",
         "address": "Bebek, 34342 Beşiktaş/İstanbul",
         "phone": "+90 (212) 359 54 00",
         "website": "https://bogazici.edu.tr",
@@ -16,6 +16,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "102210156",
                 "name": "Bilgisayar Mühendisliği (İngilizce)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 80,
                 "filled_2025": 80,
@@ -30,6 +31,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "102210165",
                 "name": "Elektrik-Elektronik Mühendisliği (İngilizce)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 80,
                 "filled_2025": 80,
@@ -44,6 +46,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "102210253",
                 "name": "Endüstri Mühendisliği (İngilizce)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 70,
                 "filled_2025": 70,
@@ -58,6 +61,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "102210217",
                 "name": "İşletme (İngilizce)",
+                "faculty": "İktisadi ve İdari Bilimler Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 100,
                 "filled_2025": 100,
@@ -72,6 +76,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "102210235",
                 "name": "Psikoloji (İngilizce)",
+                "faculty": "Fen-Edebiyat Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 60,
                 "filled_2025": 60,
@@ -89,6 +94,7 @@ UNIVERSITIES_DATA = [
         "id": "itu",
         "name": "İstanbul Teknik Üniversitesi",
         "type": "Devlet",
+        "city": "İstanbul",
         "address": "Maslak, 34469 Sarıyer/İstanbul",
         "phone": "+90 (212) 285 30 30",
         "website": "https://itu.edu.tr",
@@ -97,6 +103,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105510115",
                 "name": "Bilgisayar Mühendisliği (İngilizce)",
+                "faculty": "Bilgisayar ve Bilişim Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 105,
                 "filled_2025": 108,
@@ -111,6 +118,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105510133",
                 "name": "Elektronik ve Haberleşme Mühendisliği (İngilizce)",
+                "faculty": "Elektrik-Elektronik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 90,
                 "filled_2025": 92,
@@ -125,6 +133,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105510345",
                 "name": "Mimarlık (İngilizce)",
+                "faculty": "Mimarlık Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 80,
                 "filled_2025": 80,
@@ -139,6 +148,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105510203",
                 "name": "Makine Mühendisliği",
+                "faculty": "Makine Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 120,
                 "filled_2025": 123,
@@ -153,6 +163,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105510982",
                 "name": "Yapay Zeka ve Veri Mühendisliği (İngilizce)",
+                "faculty": "Bilgisayar ve Bilişim Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 40,
                 "filled_2025": 41,
@@ -170,6 +181,7 @@ UNIVERSITIES_DATA = [
         "id": "istanbul",
         "name": "İstanbul Üniversitesi",
         "type": "Devlet",
+        "city": "İstanbul",
         "address": "Beyazıt, 34116 Fatih/İstanbul",
         "phone": "+90 (212) 440 00 00",
         "website": "https://istanbul.edu.tr",
@@ -178,6 +190,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105610196",
                 "name": "Tıp (İstanbul Tıp Fakültesi)",
+                "faculty": "Tıp Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 300,
                 "filled_2025": 305,
@@ -192,6 +205,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105610336",
                 "name": "Hukuk Fakültesi",
+                "faculty": "Hukuk Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 600,
                 "filled_2025": 615,
@@ -206,6 +220,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105610584",
                 "name": "İktisat",
+                "faculty": "İktisat Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 150,
                 "filled_2025": 153,
@@ -220,6 +235,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "105650742",
                 "name": "Adalet (AÖF)",
+                "faculty": "Açık ve Uzaktan Eğitim Fakültesi",
                 "degree": "Önlisans",
                 "quota_2025": 1000,
                 "filled_2025": 1000,
@@ -237,6 +253,7 @@ UNIVERSITIES_DATA = [
         "id": "yildiz-teknik",
         "name": "Yıldız Teknik Üniversitesi",
         "type": "Devlet",
+        "city": "İstanbul",
         "address": "Davutpaşa, 34220 Esenler/İstanbul",
         "phone": "+90 (212) 383 71 00",
         "website": "https://yildiz.edu.tr",
@@ -245,6 +262,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "111010112",
                 "name": "Bilgisayar Mühendisliği",
+                "faculty": "Elektrik-Elektronik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 110,
                 "filled_2025": 113,
@@ -259,6 +277,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "111010157",
                 "name": "Mimarlık",
+                "faculty": "Mimarlık Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 120,
                 "filled_2025": 120,
@@ -273,6 +292,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "111010184",
                 "name": "Mekatronik Mühendisliği",
+                "faculty": "Makine Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 80,
                 "filled_2025": 82,
@@ -290,6 +310,7 @@ UNIVERSITIES_DATA = [
         "id": "koc",
         "name": "Koç Üniversitesi",
         "type": "Vakıf",
+        "city": "İstanbul",
         "address": "Rumelifeneri Yolu, 34450 Sarıyer/İstanbul",
         "phone": "+90 (212) 338 18 18",
         "website": "https://ku.edu.tr",
@@ -298,6 +319,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "203910398",
                 "name": "Bilgisayar Mühendisliği (İngilizce) (Burslu)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 15,
                 "filled_2025": 15,
@@ -312,6 +334,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "203910405",
                 "name": "Tıp Fakültesi (İngilizce) (Burslu)",
+                "faculty": "Tıp Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 10,
                 "filled_2025": 10,
@@ -326,6 +349,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "203910247",
                 "name": "Psikoloji (İngilizce) (Ücretli)",
+                "faculty": "İnsani Bilimler ve Edebiyat Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 40,
                 "filled_2025": 40,
@@ -343,6 +367,7 @@ UNIVERSITIES_DATA = [
         "id": "sabanci",
         "name": "Sabancı Üniversitesi",
         "type": "Vakıf",
+        "city": "İstanbul",
         "address": "Orta Mahalle, Üniversite Cd. No:27, 34956 Tuzla/İstanbul",
         "phone": "+90 (216) 483 90 00",
         "website": "https://sabanciuniv.edu",
@@ -351,6 +376,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "205410112",
                 "name": "Mühendislik ve Doğa Bilimleri Programları (İngilizce) (Burslu)",
+                "faculty": "Mühendislik ve Doğa Bilimleri Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 60,
                 "filled_2025": 60,
@@ -365,6 +391,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "205410139",
                 "name": "Sanat ve Sosyal Bilimler Programları (İngilizce) (Burslu)",
+                "faculty": "Sanat ve Sosyal Bilimler Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 30,
                 "filled_2025": 30,
@@ -382,6 +409,7 @@ UNIVERSITIES_DATA = [
         "id": "bilgi",
         "name": "İstanbul Bilgi Üniversitesi",
         "type": "Vakıf",
+        "city": "İstanbul",
         "address": "Emniyettepe, Kazım Karabekir Cd. No:4, 34060 Eyüpsultan/İstanbul",
         "phone": "+90 (212) 311 50 00",
         "website": "https://bilgi.edu.tr",
@@ -390,6 +418,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "200910114",
                 "name": "Bilgisayar Mühendisliği (İngilizce) (%50 İndirimli)",
+                "faculty": "Mühendislik ve Doğa Bilimleri Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 50,
                 "filled_2025": 50,
@@ -404,6 +433,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "200910247",
                 "name": "Hukuk Fakültesi (%50 İndirimli)",
+                "faculty": "Hukuk Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 80,
                 "filled_2025": 80,
@@ -418,6 +448,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "200950348",
                 "name": "Bilgisayar Programcılığı (%50 İndirimli)",
+                "faculty": "Meslek Yüksekokulu",
                 "degree": "Önlisans",
                 "quota_2025": 60,
                 "filled_2025": 60,
@@ -435,6 +466,7 @@ UNIVERSITIES_DATA = [
         "id": "bahcesehir",
         "name": "Bahçeşehir Üniversitesi",
         "type": "Vakıf",
+        "city": "İstanbul",
         "address": "Çırağan Cd. No:4, 34349 Beşiktaş/İstanbul",
         "phone": "+90 (212) 381 00 00",
         "website": "https://bau.edu.tr",
@@ -443,6 +475,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "200210344",
                 "name": "Yazılım Mühendisliği (İngilizce) (Burslu)",
+                "faculty": "Mühendislik ve Doğa Bilimleri Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 12,
                 "filled_2025": 12,
@@ -457,6 +490,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "200210211",
                 "name": "Dijital Oyun Tasarımı (İngilizce) (Burslu)",
+                "faculty": "İletişim Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 8,
                 "filled_2025": 8,
@@ -474,6 +508,7 @@ UNIVERSITIES_DATA = [
         "id": "ozyegin",
         "name": "Özyeğin Üniversitesi",
         "type": "Vakıf",
+        "city": "İstanbul",
         "address": "Nişantepe, Orman Sk. No:34-36, 34794 Çekmeköy/İstanbul",
         "phone": "+90 (216) 564 90 00",
         "website": "https://ozyegin.edu.tr",
@@ -482,6 +517,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "204810113",
                 "name": "Bilgisayar Mühendisliği (İngilizce) (Burslu)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 15,
                 "filled_2025": 15,
@@ -496,6 +532,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "204810237",
                 "name": "Pilotaj (İngilizce) (Burslu)",
+                "faculty": "Havacılık ve Uzay Bilimleri Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 5,
                 "filled_2025": 5,
@@ -513,6 +550,7 @@ UNIVERSITIES_DATA = [
         "id": "marmara",
         "name": "Marmara Üniversitesi",
         "type": "Devlet",
+        "city": "İstanbul",
         "address": "Göztepe Kampüsü, 34722 Kadıköy/İstanbul",
         "phone": "+90 (216) 777 00 00",
         "website": "https://marmara.edu.tr",
@@ -521,6 +559,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "107210134",
                 "name": "Bilgisayar Mühendisliği (İngilizce)",
+                "faculty": "Mühendislik Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 90,
                 "filled_2025": 92,
@@ -535,6 +574,7 @@ UNIVERSITIES_DATA = [
             {
                 "code": "107210543",
                 "name": "Diş Hekimliği Fakültesi (İngilizce)",
+                "faculty": "Diş Hekimliği Fakültesi",
                 "degree": "Lisans",
                 "quota_2025": 100,
                 "filled_2025": 102,
@@ -547,28 +587,225 @@ UNIVERSITIES_DATA = [
                 }
             }
         ]
+    },
+    {
+        "id": "aydin",
+        "name": "İstanbul Aydın Üniversitesi",
+        "type": "Vakıf",
+        "city": "İstanbul",
+        "address": "Florya Yerleşkesi, 34295 Küçükçekmece/İstanbul",
+        "phone": "+90 (212) 444 1 428",
+        "website": "https://aydin.edu.tr",
+        "faculties_count": 11,
+        "departments": [
+            {
+                "code": "200710152",
+                "name": "Yazılım Mühendisliği (İngilizce)",
+                "faculty": "Mühendislik Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 80,
+                "filled_2025": 80,
+                "male_students": 60,
+                "female_students": 20,
+                "history": {
+                    "2023": {"quota": 60, "students": 60},
+                    "2024": {"quota": 80, "students": 80},
+                    "2025": {"quota": 80, "students": 80}
+                }
+            },
+            {
+                "code": "200710325",
+                "name": "Hukuk Fakültesi",
+                "faculty": "Hukuk Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 150,
+                "filled_2025": 150,
+                "male_students": 80,
+                "female_students": 70,
+                "history": {
+                    "2023": {"quota": 150, "students": 150},
+                    "2024": {"quota": 150, "students": 150},
+                    "2025": {"quota": 150, "students": 150}
+                }
+            },
+            {
+                "code": "200710982",
+                "name": "Pilotaj (İngilizce)",
+                "faculty": "Uygulamalı Bilimler Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 15,
+                "filled_2025": 15,
+                "male_students": 13,
+                "female_students": 2,
+                "history": {
+                    "2023": {"quota": 10, "students": 10},
+                    "2024": {"quota": 15, "students": 15},
+                    "2025": {"quota": 15, "students": 15}
+                }
+            }
+        ]
+    },
+    {
+        "id": "beykent",
+        "name": "İstanbul Beykent Üniversitesi",
+        "type": "Vakıf",
+        "city": "İstanbul",
+        "address": "Ayazağa Kampüsü, 34396 Sarıyer/İstanbul",
+        "phone": "+90 (212) 444 1 997",
+        "website": "https://beykent.edu.tr",
+        "faculties_count": 9,
+        "departments": [
+            {
+                "code": "200310214",
+                "name": "Mimarlık (İngilizce)",
+                "faculty": "Mühendislik-Mimarlık Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 60,
+                "filled_2025": 60,
+                "male_students": 25,
+                "female_students": 35,
+                "history": {
+                    "2023": {"quota": 60, "students": 60},
+                    "2024": {"quota": 60, "students": 60},
+                    "2025": {"quota": 60, "students": 60}
+                }
+            },
+            {
+                "code": "200350412",
+                "name": "Bilgisayar Programcılığı",
+                "faculty": "Meslek Yüksekokulu",
+                "degree": "Önlisans",
+                "quota_2025": 120,
+                "filled_2025": 120,
+                "male_students": 95,
+                "female_students": 25,
+                "history": {
+                    "2023": {"quota": 100, "students": 100},
+                    "2024": {"quota": 120, "students": 120},
+                    "2025": {"quota": 120, "students": 120}
+                }
+            }
+        ]
+    },
+    {
+        "id": "esenyurt",
+        "name": "İstanbul Esenyurt Üniversitesi",
+        "type": "Vakıf",
+        "city": "İstanbul",
+        "address": "Esenyurt Kampüsü, 34510 İstanbul",
+        "phone": "+90 (212) 373 59 00",
+        "website": "https://esenyurt.edu.tr",
+        "faculties_count": 4,
+        "departments": [
+            {
+                "code": "202010156",
+                "name": "İşletme",
+                "faculty": "İşletme ve Yönetim Bilimleri Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 40,
+                "filled_2025": 40,
+                "male_students": 22,
+                "female_students": 18,
+                "history": {
+                    "2023": {"quota": 40, "students": 40},
+                    "2024": {"quota": 40, "students": 40},
+                    "2025": {"quota": 40, "students": 40}
+                }
+            },
+            {
+                "code": "202050215",
+                "name": "Çocuk Gelişimi",
+                "faculty": "Sağlık Hizmetleri Meslek Yüksekokulu",
+                "degree": "Önlisans",
+                "quota_2025": 80,
+                "filled_2025": 80,
+                "male_students": 5,
+                "female_students": 75,
+                "history": {
+                    "2023": {"quota": 80, "students": 80},
+                    "2024": {"quota": 80, "students": 80},
+                    "2025": {"quota": 80, "students": 80}
+                }
+            }
+        ]
+    },
+    {
+        "id": "giresun",
+        "name": "Giresun Üniversitesi",
+        "type": "Devlet",
+        "city": "Giresun",
+        "address": "Gaziler Yerleşkesi, 28200 Giresun",
+        "phone": "+90 (454) 310 10 00",
+        "website": "https://giresun.edu.tr",
+        "faculties_count": 13,
+        "departments": [
+            {
+                "code": "104510118",
+                "name": "Bilgisayar Mühendisliği",
+                "faculty": "Mühendislik Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 60,
+                "filled_2025": 60,
+                "male_students": 45,
+                "female_students": 15,
+                "history": {
+                    "2023": {"quota": 60, "students": 60},
+                    "2024": {"quota": 60, "students": 60},
+                    "2025": {"quota": 60, "students": 60}
+                }
+            },
+            {
+                "code": "104510254",
+                "name": "Tıp Fakültesi",
+                "faculty": "Tıp Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 80,
+                "filled_2025": 80,
+                "male_students": 42,
+                "female_students": 38,
+                "history": {
+                    "2023": {"quota": 70, "students": 70},
+                    "2024": {"quota": 80, "students": 80},
+                    "2025": {"quota": 80, "students": 80}
+                }
+            },
+            {
+                "code": "104510342",
+                "name": "İlköğretim Matematik Öğretmenliği",
+                "faculty": "Eğitim Fakültesi",
+                "degree": "Lisans",
+                "quota_2025": 50,
+                "filled_2025": 50,
+                "male_students": 15,
+                "female_students": 35,
+                "history": {
+                    "2023": {"quota": 50, "students": 50},
+                    "2024": {"quota": 50, "students": 50},
+                    "2025": {"quota": 50, "students": 50}
+                }
+            }
+        ]
     }
 ]
 
 def run_pipeline():
     print("Starting whichuni Data Compilation Pipeline...")
     
-    # 1. Output directory check
+    # Ensure target paths exist
     os.makedirs("scraper", exist_ok=True)
-    os.makedirs("src", exist_ok=True)
     os.makedirs("src/data", exist_ok=True)
     
     output_path = os.path.join("scraper", "universities.json")
     js_output_path = os.path.join("src", "data", "universities.json")
     
-    # 2. Write data to json files
+    # Write to files as JSON arrays
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(UNIVERSITIES_DATA, f, ensure_ascii=False, indent=2)
         
     with open(js_output_path, "w", encoding="utf-8") as f:
         json.dump(UNIVERSITIES_DATA, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully compiled {len(UNIVERSITIES_DATA)} Istanbul universities.")
+    print(f"Successfully compiled {len(UNIVERSITIES_DATA)} universities.")
     print(f"Data saved to: {output_path} and {js_output_path}")
 
 if __name__ == "__main__":
