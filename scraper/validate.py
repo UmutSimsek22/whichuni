@@ -22,8 +22,8 @@ def validate_data():
     errors = 0
     warnings = 0
     
-    required_uni_keys = {"id", "name", "type", "address", "phone", "website", "faculties_count", "departments"}
-    required_dept_keys = {"code", "name", "degree", "quota_2025", "filled_2025", "male_students", "female_students", "history"}
+    required_uni_keys = {"id", "name", "type", "city", "address", "phone", "website", "faculties_count", "departments"}
+    required_dept_keys = {"code", "name", "faculty", "degree", "quota_2025", "filled_2025", "male_students", "female_students", "history"}
     required_history_keys = {"2023", "2024", "2025"}
     
     for idx, uni in enumerate(data):
@@ -39,6 +39,10 @@ def validate_data():
             
         if uni["type"] not in {"Devlet", "Vakıf"}:
             print(f"Error: {uni['name']} type must be 'Devlet' or 'Vakıf'. Found: {uni['type']}")
+            errors += 1
+            
+        if uni["city"] not in {"İstanbul", "Giresun"}:
+            print(f"Error: {uni['name']} city must be 'İstanbul' or 'Giresun'. Found: {uni['city']}")
             errors += 1
             
         depts = uni.get("departments", [])
@@ -72,6 +76,10 @@ def validate_data():
                 
             if dept["degree"] not in {"Lisans", "Önlisans"}:
                 print(f"Error: {uni['name']} - {dept['name']} degree must be 'Lisans' or 'Önlisans'. Found: {dept['degree']}")
+                errors += 1
+                
+            if not isinstance(dept["faculty"], str) or len(dept["faculty"].strip()) == 0:
+                print(f"Error: {uni['name']} - {dept['name']} must have a non-empty string for faculty.")
                 errors += 1
                 
             history = dept.get("history", {})
