@@ -1,7 +1,8 @@
 {
-  "name": "uniweb",
+  "name": "whichuni",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "description": "Türkiye Üniversiteleri ve YÖK Atlas Tercih Bilgi Portalı",
   "type": "module",
   "scripts": {
     "dev": "vite",

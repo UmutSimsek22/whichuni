@@ -336,7 +336,7 @@ export default function App() {
             </svg>
             <h1>which<span>uni</span></h1>
           </div>
-            <div className="tagline">Akademik Tercih ve YÖK Atlas Öğrenci Dağılım İstatistikleri Portalı</div>
+            <div className="tagline">Türkiye Üniversiteleri ve YÖK Atlas Tercih Bilgi Portalı</div>
           </div>
 
           <button
