@@ -1,0 +1,1370 @@
+{
+  "326654": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ATAŞEHİR",
+    "official_name": "ACIBADEM MEHMET ALİ AYDINLAR ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "102261": {
+    "type": "Devlet",
+    "city": "ESKİŞEHİR",
+    "district": "TEPEBAŞI",
+    "official_name": "ANADOLU ÜNİVERSİTESİ (ESKİŞEHİR)"
+  },
+  "101458": {
+    "type": "Devlet",
+    "city": "ANTALYA",
+    "district": "KONYAALTI",
+    "official_name": "AKDENİZ ÜNİVERSİTESİ (ANTALYA)"
+  },
+  "339985": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "YENİMAHALLE",
+    "official_name": "ANKARA HACI BAYRAM VELİ ÜNİVERSİTESİ"
+  },
+  "100259": {
+    "type": "Devlet",
+    "city": "ADIYAMAN",
+    "district": "MERKEZ",
+    "official_name": "ADIYAMAN ÜNİVERSİTESİ"
+  },
+  "326019": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ŞİŞLİ",
+    "official_name": "ALTINBAŞ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "100869": {
+    "type": "Devlet",
+    "city": "AFYONKARAHİSAR",
+    "district": "MERKEZ",
+    "official_name": "AFYON KOCATEPE ÜNİVERSİTESİ (AFYONKARAHİSAR)"
+  },
+  "232846": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ALTINDAĞ",
+    "official_name": "ANKARA SOSYAL BİLİMLER ÜNİVERSİTESİ"
+  },
+  "102005": {
+    "type": "Devlet",
+    "city": "AKSARAY",
+    "district": "MERKEZ",
+    "official_name": "AKSARAY ÜNİVERSİTESİ"
+  },
+  "340001": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ALTINDAĞ",
+    "official_name": "ANKARA MEDİPOL ÜNİVERSİTESİ"
+  },
+  "411762": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "ANKARA BİLİM ÜNİVERSİTESİ"
+  },
+  "274883": {
+    "type": "Devlet",
+    "city": "ANTALYA",
+    "district": "ALANYA",
+    "official_name": "ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ (ANTALYA)"
+  },
+  "447835": {
+    "type": "Vakıf",
+    "city": "ANTALYA",
+    "district": "ALANYA",
+    "official_name": "ALANYA ÜNİVERSİTESİ (ANTALYA)"
+  },
+  "339999": {
+    "type": "Devlet",
+    "city": "AFYONKARAHİSAR",
+    "district": "MERKEZ",
+    "official_name": "AFYONKARAHİSAR SAĞLIK BİLİMLERİ ÜNİVERSİTESİ"
+  },
+  "102198": {
+    "type": "Devlet",
+    "city": "AMASYA",
+    "district": "MERKEZ",
+    "official_name": "AMASYA ÜNİVERSİTESİ"
+  },
+  "385368": {
+    "type": "Devlet",
+    "city": "ADANA",
+    "district": "SARIÇAM",
+    "official_name": "ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "104140": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "BAHÇEŞEHİR ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "102738": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "ANKARA ÜNİVERSİTESİ"
+  },
+  "364158": {
+    "type": "Devlet",
+    "city": "AYDIN",
+    "district": "EFELER",
+    "official_name": "AYDIN ADNAN MENDERES ÜNİVERSİTESİ"
+  },
+  "103545": {
+    "type": "Devlet",
+    "city": "ERZURUM",
+    "district": "YAKUTİYE",
+    "official_name": "ATATÜRK ÜNİVERSİTESİ (ERZURUM)"
+  },
+  "311737": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "KEÇİÖREN",
+    "official_name": "ANKARA YILDIRIM BEYAZIT ÜNİVERSİTESİ"
+  },
+  "104213": {
+    "type": "Devlet",
+    "city": "BALIKESİR",
+    "district": "ALTIEYLÜL",
+    "official_name": "BALIKESİR ÜNİVERSİTESİ"
+  },
+  "104090": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "GÖLBAŞI",
+    "official_name": "ATILIM ÜNİVERSİTESİ (ANKARA)"
+  },
+  "104578": {
+    "type": "Devlet",
+    "city": "BARTIN",
+    "district": "MERKEZ",
+    "official_name": "BARTIN ÜNİVERSİTESİ"
+  },
+  "103443": {
+    "type": "Devlet",
+    "city": "ARTVİN",
+    "district": "MERKEZ",
+    "official_name": "ARTVİN ÇORUH ÜNİVERSİTESİ"
+  },
+  "327022": {
+    "type": "Vakıf",
+    "city": "ANTALYA",
+    "district": "DÖŞEMEALTI",
+    "official_name": "ANTALYA BİLİM ÜNİVERSİTESİ"
+  },
+  "274881": {
+    "type": "Devlet",
+    "city": "BALIKESİR",
+    "district": "BANDIRMA",
+    "official_name": "BANDIRMA ONYEDİ EYLÜL ÜNİVERSİTESİ (BALIKESİR)"
+  },
+  "101313": {
+    "type": "Devlet",
+    "city": "AĞRI",
+    "district": "MERKEZ",
+    "official_name": "AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ"
+  },
+  "105322": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "BEŞİKTAŞ",
+    "official_name": "BOĞAZİÇİ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "109290": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "BORNOVA",
+    "official_name": "EGE ÜNİVERSİTESİ (İZMİR)"
+  },
+  "108163": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "BUCA",
+    "official_name": "DOKUZ EYLÜL ÜNİVERSİTESİ (İZMİR)"
+  },
+  "362386": {
+    "type": "Devlet",
+    "city": "BURSA",
+    "district": "NİLÜFER",
+    "official_name": "BURSA ULUDAĞ ÜNİVERSİTESİ"
+  },
+  "163894": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "FATİH",
+    "official_name": "BEZM-İ ÂLEM VAKIF ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "104628": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ETİMESGUT",
+    "official_name": "BAŞKENT ÜNİVERSİTESİ (ANKARA)"
+  },
+  "251241": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ZEYTİNBURNU",
+    "official_name": "BİRUNİ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "341799": {
+    "type": "Devlet",
+    "city": "BOLU",
+    "district": "MERKEZ",
+    "official_name": "BOLU ABANT İZZET BAYSAL ÜNİVERSİTESİ"
+  },
+  "355074": {
+    "type": "Devlet",
+    "city": "BURDUR",
+    "district": "MERKEZ",
+    "official_name": "BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ"
+  },
+  "109110": {
+    "type": "Devlet",
+    "city": "DÜZCE",
+    "district": "MERKEZ",
+    "official_name": "DÜZCE ÜNİVERSİTESİ"
+  },
+  "202959": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GAZİMAĞUSA",
+    "official_name": "DOĞU AKDENİZ ÜNİVERSİTESİ (KKTC-GAZİMAĞUSA)"
+  },
+  "105248": {
+    "type": "Devlet",
+    "city": "BİTLİS",
+    "district": "MERKEZ",
+    "official_name": "BİTLİS EREN ÜNİVERSİTESİ"
+  },
+  "107723": {
+    "type": "Devlet",
+    "city": "DİYARBAKIR",
+    "district": "SUR",
+    "official_name": "DİCLE ÜNİVERSİTESİ (DİYARBAKIR)"
+  },
+  "384591": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ŞİŞLİ",
+    "official_name": "DEMİROĞLU BİLİM ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "173494": {
+    "type": "Devlet",
+    "city": "BURSA",
+    "district": "YILDIRIM",
+    "official_name": "BURSA TEKNİK ÜNİVERSİTESİ"
+  },
+  "306383": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYKOZ",
+    "official_name": "BEYKOZ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "108112": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ÜSKÜDAR",
+    "official_name": "DOĞUŞ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "105024": {
+    "type": "Devlet",
+    "city": "BİLECİK",
+    "district": "MERKEZ",
+    "official_name": "BİLECİK ŞEYH EDEBALİ ÜNİVERSİTESİ"
+  },
+  "111395": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "BEŞİKTAŞ",
+    "official_name": "GALATASARAY ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "113082": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "HACETTEPE ÜNİVERSİTESİ (ANKARA)"
+  },
+  "133520": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "YENİMAHALLE",
+    "official_name": "GAZİ ÜNİVERSİTESİ (ANKARA)"
+  },
+  "339997": {
+    "type": "Devlet",
+    "city": "ESKİŞEHİR",
+    "district": "TEPEBAŞI",
+    "official_name": "ESKİŞEHİR TEKNİK ÜNİVERSİTESİ"
+  },
+  "110538": {
+    "type": "Devlet",
+    "city": "ESKİŞEHİR",
+    "district": "ODUNPAZARI",
+    "official_name": "ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ"
+  },
+  "112080": {
+    "type": "Devlet",
+    "city": "GAZİANTEP",
+    "district": "ŞEHİTKAMİL",
+    "official_name": "GAZİANTEP ÜNİVERSİTESİ"
+  },
+  "163897": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ÜSKÜDAR",
+    "official_name": "FATİH SULTAN MEHMET VAKIF ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "112836": {
+    "type": "Devlet",
+    "city": "GİRESUN",
+    "district": "MERKEZ",
+    "official_name": "GİRESUN ÜNİVERSİTESİ"
+  },
+  "113681": {
+    "type": "Devlet",
+    "city": "HAKKARİ",
+    "district": "MERKEZ",
+    "official_name": "HAKKARİ ÜNİVERSİTESİ"
+  },
+  "250548": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GİRNE",
+    "official_name": "GİRNE ÜNİVERSİTESİ (KKTC-GİRNE)"
+  },
+  "109868": {
+    "type": "Devlet",
+    "city": "KAYSERİ",
+    "district": "MELİKGAZİ",
+    "official_name": "ERCİYES ÜNİVERSİTESİ (KAYSERİ)"
+  },
+  "113699": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "EYÜPSULTAN",
+    "official_name": "HALİÇ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "110987": {
+    "type": "Devlet",
+    "city": "ELAZIĞ",
+    "district": "MERKEZ",
+    "official_name": "FIRAT ÜNİVERSİTESİ (ELAZIĞ)"
+  },
+  "310017": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ATAŞEHİR",
+    "official_name": "FENERBAHÇE ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "260621": {
+    "type": "Devlet",
+    "city": "KOCAELİ",
+    "district": "GEBZE",
+    "official_name": "GEBZE TEKNİK ÜNİVERSİTESİ"
+  },
+  "202542": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GİRNE",
+    "official_name": "GİRNE AMERİKAN ÜNİVERSİTESİ (KKTC-GİRNE)"
+  },
+  "370189": {
+    "type": "Devlet",
+    "city": "ERZİNCAN",
+    "district": "MERKEZ",
+    "official_name": "ERZİNCAN BİNALİ YILDIRIM ÜNİVERSİTESİ"
+  },
+  "384577": {
+    "type": "Devlet",
+    "city": "GAZİANTEP",
+    "district": "ŞAHİNBEY",
+    "official_name": "GAZİANTEP İSLAM BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "116281": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "FATİH",
+    "official_name": "KADİR HAS ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "138586": {
+    "type": "Vakıf",
+    "city": "GAZİANTEP",
+    "district": "ŞAHİNBEY",
+    "official_name": "HASAN KALYONCU ÜNİVERSİTESİ (GAZİANTEP)"
+  },
+  "367208": {
+    "type": "Devlet",
+    "city": "HATAY",
+    "district": "ANTAKYA",
+    "official_name": "HATAY MUSTAFA KEMAL ÜNİVERSİTESİ"
+  },
+  "117553": {
+    "type": "Devlet",
+    "city": "KARAMAN",
+    "district": "MERKEZ",
+    "official_name": "KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ (KARAMAN)"
+  },
+  "117673": {
+    "type": "Devlet",
+    "city": "KASTAMONU",
+    "district": "MERKEZ",
+    "official_name": "KASTAMONU ÜNİVERSİTESİ"
+  },
+  "113746": {
+    "type": "Devlet",
+    "city": "ŞANLIURFA",
+    "district": "HALİLİYE",
+    "official_name": "HARRAN ÜNİVERSİTESİ (ŞANLIURFA)"
+  },
+  "117127": {
+    "type": "Devlet",
+    "city": "TRABZON",
+    "district": "ORTAHİSAR",
+    "official_name": "KARADENİZ TEKNİK ÜNİVERSİTESİ (TRABZON)"
+  },
+  "116608": {
+    "type": "Devlet",
+    "city": "KAHRAMANMARAŞ",
+    "district": "ONİKİŞUBAT",
+    "official_name": "KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ"
+  },
+  "116345": {
+    "type": "Devlet",
+    "city": "KARS",
+    "district": "MERKEZ",
+    "official_name": "KAFKAS ÜNİVERSİTESİ (KARS)"
+  },
+  "114218": {
+    "type": "Devlet",
+    "city": "ÇORUM",
+    "district": "MERKEZ",
+    "official_name": "HİTİT ÜNİVERSİTESİ (ÇORUM)"
+  },
+  "116950": {
+    "type": "Devlet",
+    "city": "KARABÜK",
+    "district": "MERKEZ",
+    "official_name": "KARABÜK ÜNİVERSİTESİ"
+  },
+  "325756": {
+    "type": "Vakıf",
+    "city": "NEVŞEHİR",
+    "district": "ÜRGÜP",
+    "official_name": "KAPADOKYA ÜNİVERSİTESİ (NEVŞEHİR)"
+  },
+  "114385": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ŞİLE",
+    "official_name": "IŞIK ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "114315": {
+    "type": "Devlet",
+    "city": "IĞDIR",
+    "district": "MERKEZ",
+    "official_name": "IĞDIR ÜNİVERSİTESİ"
+  },
+  "464048": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GİRNE",
+    "official_name": "KIBRIS AYDIN ÜNİVERSİTESİ (KKTC-GİRNE)"
+  },
+  "339998": {
+    "type": "Devlet",
+    "city": "ISPARTA",
+    "district": "EĞİRDİR",
+    "official_name": "ISPARTA UYGULAMALI BİLİMLER ÜNİVERSİTESİ"
+  },
+  "202953": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "HOCA AHMET YESEVİ ULUSLARARASI TÜRK-KAZAK ÜNİVERSİTESİ (TÜRKİSTAN-KAZAKİSTAN)"
+  },
+  "339993": {
+    "type": "Devlet",
+    "city": "KAYSERİ",
+    "district": "TALAS",
+    "official_name": "KAYSERİ ÜNİVERSİTESİ"
+  },
+  "118853": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "SARIYER",
+    "official_name": "KOÇ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "166433": {
+    "type": "Vakıf",
+    "city": "KONYA",
+    "district": "KARATAY",
+    "official_name": "KTO KARATAY ÜNİVERSİTESİ (KONYA)"
+  },
+  "118883": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "MALTEPE",
+    "official_name": "MALTEPE ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "117803": {
+    "type": "Devlet",
+    "city": "KIRIKKALE",
+    "district": "YAHŞİHAN",
+    "official_name": "KIRIKKALE ÜNİVERSİTESİ"
+  },
+  "118186": {
+    "type": "Devlet",
+    "city": "KİLİS",
+    "district": "MERKEZ",
+    "official_name": "KİLİS 7 ARALIK ÜNİVERSİTESİ"
+  },
+  "332474": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "LOKMAN HEKİM ÜNİVERSİTESİ (ANKARA)"
+  },
+  "202950": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKE",
+    "official_name": "LEFKE AVRUPA ÜNİVERSİTESİ (KKTC-LEFKE)"
+  },
+  "118239": {
+    "type": "Devlet",
+    "city": "KOCAELİ",
+    "district": "İZMİT",
+    "official_name": "KOCAELİ ÜNİVERSİTESİ"
+  },
+  "315839": {
+    "type": "Devlet",
+    "city": "MANİSA",
+    "district": "YUNUSEMRE",
+    "official_name": "MANİSA CELÂL BAYAR ÜNİVERSİTESİ"
+  },
+  "351149": {
+    "type": "Devlet",
+    "city": "KÜTAHYA",
+    "district": "MERKEZ",
+    "official_name": "KÜTAHYA DUMLUPINAR ÜNİVERSİTESİ"
+  },
+  "339982": {
+    "type": "Devlet",
+    "city": "KÜTAHYA",
+    "district": "MERKEZ",
+    "official_name": "KÜTAHYA SAĞLIK BİLİMLERİ ÜNİVERSİTESİ"
+  },
+  "354265": {
+    "type": "Devlet",
+    "city": "KIRŞEHİR",
+    "district": "MERKEZ",
+    "official_name": "KIRŞEHİR AHİ EVRAN ÜNİVERSİTESİ"
+  },
+  "118122": {
+    "type": "Devlet",
+    "city": "KIRKLARELİ",
+    "district": "MERKEZ",
+    "official_name": "KIRKLARELİ ÜNİVERSİTESİ"
+  },
+  "339983": {
+    "type": "Devlet",
+    "city": "MALATYA",
+    "district": "BATTALGAZİ",
+    "official_name": "MALATYA TURGUT ÖZAL ÜNİVERSİTESİ"
+  },
+  "202954": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "KIRGIZİSTAN-TÜRKİYE MANAS ÜNİVERSİTESİ (BİŞKEK-KIRGIZİSTAN)"
+  },
+  "411763": {
+    "type": "Vakıf",
+    "city": "KOCAELİ",
+    "district": "BAŞİSKELE",
+    "official_name": "KOCAELİ SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "317400": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GÜZELYURT",
+    "official_name": "KIBRIS SAĞLIK VE TOPLUM BİLİMLERİ ÜNİVERSİTESİ (KKTC-GÜZELYURT)"
+  },
+  "122571": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "ORTA DOĞU TEKNİK ÜNİVERSİTESİ (ANKARA)"
+  },
+  "119094": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "MALTEPE",
+    "official_name": "MARMARA ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "120301": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "119917": {
+    "type": "Devlet",
+    "city": "MERSİN",
+    "district": "YENİŞEHİR",
+    "official_name": "MERSİN ÜNİVERSİTESİ"
+  },
+  "121946": {
+    "type": "Devlet",
+    "city": "SAMSUN",
+    "district": "ATAKUM",
+    "official_name": "ONDOKUZ MAYIS ÜNİVERSİTESİ (SAMSUN)"
+  },
+  "173500": {
+    "type": "Devlet",
+    "city": "KONYA",
+    "district": "MERAM",
+    "official_name": "NECMETTİN ERBAKAN ÜNİVERSİTESİ (KONYA)"
+  },
+  "122831": {
+    "type": "Devlet",
+    "city": "DENİZLİ",
+    "district": "PAMUKKALE",
+    "official_name": "PAMUKKALE ÜNİVERSİTESİ (DENİZLİ)"
+  },
+  "120444": {
+    "type": "Devlet",
+    "city": "MUĞLA",
+    "district": "MENTEŞE",
+    "official_name": "MUĞLA SITKI KOÇMAN ÜNİVERSİTESİ"
+  },
+  "122395": {
+    "type": "Devlet",
+    "city": "ORDU",
+    "district": "ALTINORDU",
+    "official_name": "ORDU ÜNİVERSİTESİ"
+  },
+  "246224": {
+    "type": "Devlet",
+    "city": "NEVŞEHİR",
+    "district": "MERKEZ",
+    "official_name": "NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ"
+  },
+  "215913": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "SARIYER",
+    "official_name": "MEF ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "306556": {
+    "type": "Devlet",
+    "city": "NİĞDE",
+    "district": "MERKEZ",
+    "official_name": "NİĞDE ÖMER HALİSDEMİR ÜNİVERSİTESİ"
+  },
+  "136233": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "TUZLA",
+    "official_name": "PİRİ REİS ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "442563": {
+    "type": "Vakıf",
+    "city": "BURSA",
+    "district": "MUDANYA",
+    "official_name": "MUDANYA ÜNİVERSİTESİ (BURSA)"
+  },
+  "163891": {
+    "type": "Vakıf",
+    "city": "KAYSERİ",
+    "district": "KOCASİNAN",
+    "official_name": "NUH NACİ YAZGAN ÜNİVERSİTESİ (KAYSERİ)"
+  },
+  "121164": {
+    "type": "Devlet",
+    "city": "MUŞ",
+    "district": "MERKEZ",
+    "official_name": "MUŞ ALPARSLAN ÜNİVERSİTESİ"
+  },
+  "125552": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "TOBB EKONOMİ VE TEKNOLOJİ ÜNİVERSİTESİ (ANKARA)"
+  },
+  "123400": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "TUZLA",
+    "official_name": "SABANCI ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "163892": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "TED ÜNİVERSİTESİ (ANKARA)"
+  },
+  "123409": {
+    "type": "Devlet",
+    "city": "SAKARYA",
+    "district": "HENDEK",
+    "official_name": "SAKARYA ÜNİVERSİTESİ"
+  },
+  "344737": {
+    "type": "Devlet",
+    "city": "SİVAS",
+    "district": "MERKEZ",
+    "official_name": "SİVAS CUMHURİYET ÜNİVERSİTESİ"
+  },
+  "270121": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "ÜSKÜDAR",
+    "official_name": "SAĞLIK BİLİMLERİ ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "124805": {
+    "type": "Devlet",
+    "city": "SİNOP",
+    "district": "MERKEZ",
+    "official_name": "SİNOP ÜNİVERSİTESİ"
+  },
+  "367245": {
+    "type": "Devlet",
+    "city": "TOKAT",
+    "district": "MERKEZ",
+    "official_name": "TOKAT GAZİOSMANPAŞA ÜNİVERSİTESİ"
+  },
+  "123902": {
+    "type": "Devlet",
+    "city": "KONYA",
+    "district": "SELÇUKLU",
+    "official_name": "SELÇUK ÜNİVERSİTESİ (KONYA)"
+  },
+  "339989": {
+    "type": "Devlet",
+    "city": "SAMSUN",
+    "district": "CANİK",
+    "official_name": "SAMSUN ÜNİVERSİTESİ"
+  },
+  "124902": {
+    "type": "Devlet",
+    "city": "ISPARTA",
+    "district": "MERKEZ",
+    "official_name": "SÜLEYMAN DEMİREL ÜNİVERSİTESİ (ISPARTA)"
+  },
+  "356278": {
+    "type": "Devlet",
+    "city": "TEKİRDAĞ",
+    "district": "SÜLEYMANPAŞA",
+    "official_name": "TEKİRDAĞ NAMIK KEMAL ÜNİVERSİTESİ"
+  },
+  "241177": {
+    "type": "Vakıf",
+    "city": "GAZİANTEP",
+    "district": "ŞEHİTKAMİL",
+    "official_name": "SANKO ÜNİVERSİTESİ (GAZİANTEP)"
+  },
+  "123221": {
+    "type": "Devlet",
+    "city": "RİZE",
+    "district": "MERKEZ",
+    "official_name": "RECEP TAYYİP ERDOĞAN ÜNİVERSİTESİ (RİZE)"
+  },
+  "124703": {
+    "type": "Devlet",
+    "city": "VAN",
+    "district": "TUŞBA",
+    "official_name": "SİİRT ÜNİVERSİTESİ"
+  },
+  "163889": {
+    "type": "Vakıf",
+    "city": "MERSİN",
+    "district": "YENİŞEHİR",
+    "official_name": "TOROS ÜNİVERSİTESİ (MERSİN)"
+  },
+  "126818": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ATAŞEHİR",
+    "official_name": "YEDİTEPE ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "301253": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "ULUSLARARASI SARAYBOSNA ÜNİVERSİTESİ (SARAYBOSNA - BOSNA - HERSEK)"
+  },
+  "126982": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "ESENLER",
+    "official_name": "YILDIZ TEKNİK ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "337414": {
+    "type": "Devlet",
+    "city": "VAN",
+    "district": "TUŞBA",
+    "official_name": "VAN YÜZÜNCÜ YIL ÜNİVERSİTESİ"
+  },
+  "203267": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ETİMESGUT",
+    "official_name": "TÜRK HAVA KURUMU ÜNİVERSİTESİ (ANKARA)"
+  },
+  "201784": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "BEYKOZ",
+    "official_name": "TÜRK-ALMAN ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "126773": {
+    "type": "Vakıf",
+    "city": "İZMİR",
+    "district": "BORNOVA",
+    "official_name": "YAŞAR ÜNİVERSİTESİ (İZMİR)"
+  },
+  "126537": {
+    "type": "Devlet",
+    "city": "UŞAK",
+    "district": "MERKEZ",
+    "official_name": "UŞAK ÜNİVERSİTESİ"
+  },
+  "339992": {
+    "type": "Devlet",
+    "city": "TRABZON",
+    "district": "AKÇAABAT",
+    "official_name": "TRABZON ÜNİVERSİTESİ"
+  },
+  "125577": {
+    "type": "Devlet",
+    "city": "EDİRNE",
+    "district": "MERKEZ",
+    "official_name": "TRAKYA ÜNİVERSİTESİ (EDİRNE)"
+  },
+  "125968": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "UFUK ÜNİVERSİTESİ (ANKARA)"
+  },
+  "206792": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "YÜKSEK İHTİSAS ÜNİVERSİTESİ (ANKARA)"
+  },
+  "202951": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "ULUSLARARASI KIBRIS ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "202952": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "YAKIN DOĞU ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "317343": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GİRNE",
+    "official_name": "ULUSLARARASI FİNAL ÜNİVERSİTESİ (KKTC-GİRNE)"
+  },
+  "126742": {
+    "type": "Devlet",
+    "city": "YALOVA",
+    "district": "MERKEZ",
+    "official_name": "YALOVA ÜNİVERSİTESİ"
+  },
+  "163900": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ÜMRANİYE",
+    "official_name": "İSTANBUL 29 MAYIS ÜNİVERSİTESİ"
+  },
+  "105118": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "İHSAN DOĞRAMACI BİLKENT ÜNİVERSİTESİ (ANKARA)"
+  },
+  "122827": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ÇEKMEKÖY",
+    "official_name": "ÖZYEĞİN ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "274887": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BAŞAKŞEHİR",
+    "official_name": "İBN HALDUN ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "114907": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "EYÜPSULTAN",
+    "official_name": "İSTANBUL BİLGİ ÜNİVERSİTESİ"
+  },
+  "114827": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KÜÇÜKÇEKMECE",
+    "official_name": "İSTANBUL AYDIN ÜNİVERSİTESİ"
+  },
+  "106545": {
+    "type": "Devlet",
+    "city": "ÇANAKKALE",
+    "district": "MERKEZ",
+    "official_name": "ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ"
+  },
+  "114436": {
+    "type": "Devlet",
+    "city": "MALATYA",
+    "district": "MERKEZ",
+    "official_name": "İNÖNÜ ÜNİVERSİTESİ (MALATYA)"
+  },
+  "365890": {
+    "type": "Devlet",
+    "city": "ZONGULDAK",
+    "district": "EREĞLİ",
+    "official_name": "ZONGULDAK BÜLENT ECEVİT ÜNİVERSİTESİ"
+  },
+  "206795": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ÜSKÜDAR",
+    "official_name": "ÜSKÜDAR ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "107012": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "ETİMESGUT",
+    "official_name": "ÇANKAYA ÜNİVERSİTESİ (ANKARA)"
+  },
+  "107211": {
+    "type": "Devlet",
+    "city": "ADANA",
+    "district": "SARIÇAM",
+    "official_name": "ÇUKUROVA ÜNİVERSİTESİ (ADANA)"
+  },
+  "339995": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KAĞITHANE",
+    "official_name": "İSTANBUL ATLAS ÜNİVERSİTESİ"
+  },
+  "448766": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "İSTANBUL BEYKENT ÜNİVERSİTESİ"
+  },
+  "163888": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYKOZ",
+    "official_name": "İSTANBUL MEDİPOL ÜNİVERSİTESİ"
+  },
+  "115335": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "İSTANBUL TİCARET ÜNİVERSİTESİ"
+  },
+  "339984": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "FATİH",
+    "official_name": "İSTANBUL ÜNİVERSİTESİ-CERRAHPAŞA"
+  },
+  "274888": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KAĞITHANE",
+    "official_name": "İSTİNYE ÜNİVERSİTESİ (İSTANBUL)"
+  },
+  "115069": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "BEŞİKTAŞ",
+    "official_name": "İSTANBUL TEKNİK ÜNİVERSİTESİ"
+  },
+  "115373": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "FATİH",
+    "official_name": "İSTANBUL ÜNİVERSİTESİ"
+  },
+  "163898": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KÜÇÜKÇEKMECE",
+    "official_name": "İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ"
+  },
+  "173496": {
+    "type": "Devlet",
+    "city": "İSTANBUL",
+    "district": "ÜSKÜDAR",
+    "official_name": "İSTANBUL MEDENİYET ÜNİVERSİTESİ"
+  },
+  "115022": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KÜÇÜKÇEKMECE",
+    "official_name": "İSTANBUL KÜLTÜR ÜNİVERSİTESİ"
+  },
+  "360777": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "TUZLA",
+    "official_name": "İSTANBUL OKAN ÜNİVERSİTESİ"
+  },
+  "302687": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KAĞITHANE",
+    "official_name": "İSTANBUL KENT ÜNİVERSİTESİ"
+  },
+  "447904": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "SARIYER",
+    "official_name": "İSTANBUL NİŞANTAŞI ÜNİVERSİTESİ"
+  },
+  "116147": {
+    "type": "Vakıf",
+    "city": "İZMİR",
+    "district": "BALÇOVA",
+    "official_name": "İZMİR EKONOMİ ÜNİVERSİTESİ"
+  },
+  "302685": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "KARABAĞLAR",
+    "official_name": "İZMİR DEMOKRASİ ÜNİVERSİTESİ"
+  },
+  "173498": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "ÇİĞLİ",
+    "official_name": "İZMİR KATİP ÇELEBİ ÜNİVERSİTESİ"
+  },
+  "302686": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "MENEMEN",
+    "official_name": "İZMİR BAKIRÇAY ÜNİVERSİTESİ"
+  },
+  "339996": {
+    "type": "Vakıf",
+    "city": "İZMİR",
+    "district": "BUCA",
+    "official_name": "İZMİR TINAZTEPE ÜNİVERSİTESİ"
+  },
+  "116207": {
+    "type": "Devlet",
+    "city": "İZMİR",
+    "district": "URLA",
+    "official_name": "İZMİR YÜKSEK TEKNOLOJİ ENSTİTÜSÜ"
+  },
+  "173499": {
+    "type": "Devlet",
+    "city": "KAYSERİ",
+    "district": "KOCASİNAN",
+    "official_name": "ABDULLAH GÜL ÜNİVERSİTESİ (KAYSERİ)"
+  },
+  "375111": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GAZİMAĞUSA",
+    "official_name": "ADA KENT ÜNİVERSİTESİ (KKTC-GAZİMAĞUSA)"
+  },
+  "240640": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "AKDENİZ KARPAZ ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "324993": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "ANKARA MÜZİK VE GÜZEL SANATLAR ÜNİVERSİTESİ"
+  },
+  "447662": {
+    "type": "Vakıf",
+    "city": "ANTALYA",
+    "district": "SERİK",
+    "official_name": "ANTALYA BELEK ÜNİVERSİTESİ"
+  },
+  "103400": {
+    "type": "Devlet",
+    "city": "ARDAHAN",
+    "district": "MERKEZ",
+    "official_name": "ARDAHAN ÜNİVERSİTESİ"
+  },
+  "417386": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GİRNE",
+    "official_name": "ARKIN YARATICI SANATLAR VE TASARIM ÜNİVERSİTESİ (KKTC-GİRNE)"
+  },
+  "255896": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ATAŞEHİR",
+    "official_name": "ATAŞEHİR ADIGÜZEL MESLEK YÜKSEKOKULU (İSTANBUL)"
+  },
+  "205351": {
+    "type": "Vakıf",
+    "city": "TRABZON",
+    "district": "YOMRA",
+    "official_name": "AVRASYA ÜNİVERSİTESİ (TRABZON)"
+  },
+  "301240": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "AZERBAYCAN DEVLET PEDAGOJİ ÜNİVERSİTESİ (BAKÜ-AZERBAYCAN)"
+  },
+  "333623": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "BAHÇEŞEHİR KIBRIS ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "104803": {
+    "type": "Devlet",
+    "city": "BATMAN",
+    "district": "MERKEZ",
+    "official_name": "BATMAN ÜNİVERSİTESİ"
+  },
+  "104922": {
+    "type": "Devlet",
+    "city": "BAYBURT",
+    "district": "MERKEZ",
+    "official_name": "BAYBURT ÜNİVERSİTESİ"
+  },
+  "105196": {
+    "type": "Devlet",
+    "city": "BİNGÖL",
+    "district": "MERKEZ",
+    "official_name": "BİNGÖL ÜNİVERSİTESİ"
+  },
+  "173495": {
+    "type": "Devlet",
+    "city": "ERZURUM",
+    "district": "YAKUTİYE",
+    "official_name": "ERZURUM TEKNİK ÜNİVERSİTESİ"
+  },
+  "113023": {
+    "type": "Devlet",
+    "city": "GÜMÜŞHANE",
+    "district": "MERKEZ",
+    "official_name": "GÜMÜŞHANE ÜNİVERSİTESİ"
+  },
+  "339994": {
+    "type": "Devlet",
+    "city": "KAHRAMANMARAŞ",
+    "district": "DULKADİROĞLU",
+    "official_name": "KAHRAMANMARAŞ İSTİKLAL ÜNİVERSİTESİ"
+  },
+  "263352": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "KIBRIS AMERİKAN ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "418550": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "GAZİMAĞUSA",
+    "official_name": "KIBRIS BATI ÜNİVERSİTESİ (KKTC-GAZİMAĞUSA)"
+  },
+  "241176": {
+    "type": "Vakıf",
+    "city": "KONYA",
+    "district": "MERAM",
+    "official_name": "KONYA GIDA VE TARIM ÜNİVERSİTESİ"
+  },
+  "339979": {
+    "type": "Devlet",
+    "city": "KONYA",
+    "district": "SELÇUKLU",
+    "official_name": "KONYA TEKNİK ÜNİVERSİTESİ"
+  },
+  "118994": {
+    "type": "Devlet",
+    "city": "MARDİN",
+    "district": "ARTUKLU",
+    "official_name": "MARDİN ARTUKLU ÜNİVERSİTESİ"
+  },
+  "307919": {
+    "type": "Devlet",
+    "city": "TUNCELİ",
+    "district": "MERKEZ",
+    "official_name": "MUNZUR ÜNİVERSİTESİ (TUNCELİ)"
+  },
+  "122735": {
+    "type": "Devlet",
+    "city": "OSMANİYE",
+    "district": "MERKEZ",
+    "official_name": "OSMANİYE KORKUT ATA ÜNİVERSİTESİ"
+  },
+  "324992": {
+    "type": "Vakıf",
+    "city": "ANKARA",
+    "district": "YENİMAHALLE",
+    "official_name": "OSTİM TEKNİK ÜNİVERSİTESİ (ANKARA)"
+  },
+  "417385": {
+    "type": "Vakıf",
+    "city": "KIBRIS",
+    "district": "LEFKOŞA",
+    "official_name": "RAUF DENKTAŞ ÜNİVERSİTESİ (KKTC-LEFKOŞA)"
+  },
+  "339988": {
+    "type": "Devlet",
+    "city": "SAKARYA",
+    "district": "SAPANCA",
+    "official_name": "SAKARYA UYGULAMALI BİLİMLER ÜNİVERSİTESİ"
+  },
+  "339990": {
+    "type": "Devlet",
+    "city": "SİVAS",
+    "district": "MERKEZ",
+    "official_name": "SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "339991": {
+    "type": "Devlet",
+    "city": "MERSİN",
+    "district": "TARSUS",
+    "official_name": "TARSUS ÜNİVERSİTESİ (MERSİN)"
+  },
+  "337118": {
+    "type": "Devlet",
+    "city": "ANKARA",
+    "district": "ÇANKAYA",
+    "official_name": "TÜRK-JAPON BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "474572": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "TİRAN NEW YORK ÜNİVERSİTESİ (TİRAN-ARNAVUTLUK)"
+  },
+  "301255": {
+    "type": "Vakıf",
+    "city": null,
+    "district": null,
+    "official_name": "ULUSLARARASI BALKAN ÜNİVERSİTESİ (ÜSKÜP-MAKEDONYA)"
+  },
+  "359730": {
+    "type": "Devlet",
+    "city": "YOZGAT",
+    "district": "MERKEZ",
+    "official_name": "YOZGAT BOZOK ÜNİVERSİTESİ"
+  },
+  "107056": {
+    "type": "Devlet",
+    "city": "ÇANKIRI",
+    "district": "MERKEZ",
+    "official_name": "ÇANKIRI KARATEKİN ÜNİVERSİTESİ"
+  },
+  "106499": {
+    "type": "Vakıf",
+    "city": "MERSİN",
+    "district": "TARSUS",
+    "official_name": "ÇAĞ ÜNİVERSİTESİ (MERSİN)"
+  },
+  "274882": {
+    "type": "Devlet",
+    "city": "HATAY",
+    "district": "İSKENDERUN",
+    "official_name": "İSKENDERUN TEKNİK ÜNİVERSİTESİ (HATAY)"
+  },
+  "114773": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ZEYTİNBURNU",
+    "official_name": "İSTANBUL AREL ÜNİVERSİTESİ"
+  },
+  "241174": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ESENYURT",
+    "official_name": "İSTANBUL ESENYURT ÜNİVERSİTESİ"
+  },
+  "391144": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "İSTANBUL GALATA ÜNİVERSİTESİ"
+  },
+  "315098": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "KARTAL",
+    "official_name": "İSTANBUL GEDİK ÜNİVERSİTESİ"
+  },
+  "130959": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "AVCILAR",
+    "official_name": "İSTANBUL GELİŞİM ÜNİVERSİTESİ"
+  },
+  "274886": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "İSTANBUL RUMELİ ÜNİVERSİTESİ"
+  },
+  "432690": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "FATİH",
+    "official_name": "İSTANBUL SAĞLIK VE SOSYAL BİLİMLER MESLEK YÜKSEKOKULU"
+  },
+  "410560": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "BEYOĞLU",
+    "official_name": "İSTANBUL SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ"
+  },
+  "440213": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ZEYTİNBURNU",
+    "official_name": "İSTANBUL TOPKAPI ÜNİVERSİTESİ"
+  },
+  "315415": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ZEYTİNBURNU",
+    "official_name": "İSTANBUL YENİ YÜZYIL ÜNİVERSİTESİ"
+  },
+  "220121": {
+    "type": "Vakıf",
+    "city": "İSTANBUL",
+    "district": "ŞİŞLİ",
+    "official_name": "İSTANBUL ŞİŞLİ MESLEK YÜKSEKOKULU"
+  },
+  "472297": {
+    "type": "Vakıf",
+    "city": "İZMİR",
+    "district": "KONAK",
+    "official_name": "İZMİR KONAK MESLEK YÜKSEKOKULU"
+  },
+  "125536": {
+    "type": "Devlet",
+    "city": "ŞIRNAK",
+    "district": "MERKEZ",
+    "official_name": "ŞIRNAK ÜNİVERSİTESİ"
+  }
+}

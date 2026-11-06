@@ -26,12 +26,23 @@ def validate_data():
     required_dept_keys = {"code", "name", "faculty", "degree", "quota_2025", "filled_2025", "male_students", "female_students", "history"}
     required_history_keys = {"2023", "2024", "2025"}
     
+    seen_uni_ids = set()
+    total_depts = 0
+    devlet_count = 0
+    vakif_count = 0
+    cities = set()
+
     for idx, uni in enumerate(data):
         missing_uni_keys = required_uni_keys - set(uni.keys())
         if missing_uni_keys:
             print(f"Error: University at index {idx} is missing keys: {missing_uni_keys}")
             errors += 1
             continue
+
+        if uni["id"] in seen_uni_ids:
+            print(f"Error: Duplicate university id '{uni['id']}' at index {idx}.")
+            errors += 1
+        seen_uni_ids.add(uni["id"])
             
         if not isinstance(uni["faculties_count"], int) or uni["faculties_count"] <= 0:
             print(f"Error: {uni['name']} must have a positive integer for faculties_count.")
@@ -40,10 +51,16 @@ def validate_data():
         if uni["type"] not in {"Devlet", "Vakıf"}:
             print(f"Error: {uni['name']} type must be 'Devlet' or 'Vakıf'. Found: {uni['type']}")
             errors += 1
+        elif uni["type"] == "Devlet":
+            devlet_count += 1
+        else:
+            vakif_count += 1
             
-        if uni["city"] not in {"İstanbul", "Giresun"}:
-            print(f"Error: {uni['name']} city must be 'İstanbul' or 'Giresun'. Found: {uni['city']}")
+        if not isinstance(uni["city"], str) or len(uni["city"].strip()) == 0:
+            print(f"Error: {uni['name']} must have a valid non-empty city string. Found: {uni.get('city')}")
             errors += 1
+        else:
+            cities.add(uni["city"])
             
         depts = uni.get("departments", [])
         if not isinstance(depts, list) or len(depts) == 0:
@@ -51,6 +68,8 @@ def validate_data():
             errors += 1
             continue
             
+        total_depts += len(depts)
+
         for dept in depts:
             missing_dept_keys = required_dept_keys - set(dept.keys())
             if missing_dept_keys:
@@ -58,8 +77,8 @@ def validate_data():
                 errors += 1
                 continue
                 
-            if not isinstance(dept["quota_2025"], int) or dept["quota_2025"] <= 0:
-                print(f"Error: {uni['name']} - {dept['name']} must have a positive integer for quota_2025.")
+            if not isinstance(dept["quota_2025"], int) or dept["quota_2025"] < 0:
+                print(f"Error: {uni['name']} - {dept['name']} must have a non-negative integer for quota_2025.")
                 errors += 1
                 
             if not isinstance(dept["filled_2025"], int) or dept["filled_2025"] < 0:
@@ -97,15 +116,24 @@ def validate_data():
                     print(f"Error: History values for year {year} in {uni['name']} - {dept['name']} must be integers.")
                     errors += 1
 
-    print(f"\nValidation Summary:")
-    print(f"Errors: {errors}")
-    print(f"Warnings: {warnings}")
+    print("\n" + "=" * 50)
+    print("           VALIDATION SUMMARY REPORT             ")
+    print("=" * 50)
+    print(f"Total Universities Validated : {len(data)}")
+    print(f"  - Devlet (State)           : {devlet_count}")
+    print(f"  - Vakıf (Foundation)       : {vakif_count}")
+    print(f"Total Distinct Cities        : {len(cities)}")
+    print(f"Total Departments Stored     : {total_depts}")
+    print(f"Total Errors Found           : {errors}")
+    print(f"Total Warnings               : {warnings}")
+    print("=" * 50)
     
-    if errors > 0:
-        print("Validation FAILED.")
-        sys.exit(1)
+    if errors == 0:
+        print("RESULT: ALL VALIDATION CHECKS PASSED SUCCESSFULLY! [OK]\n")
+        return 0
     else:
-        print("Validation PASSED. Dataset is clean and valid.")
+        print(f"RESULT: FAILED WITH {errors} ERRORS.\n")
+        sys.exit(1)
 
 if __name__ == "__main__":
     validate_data()

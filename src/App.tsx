@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import universitiesData from './data/universities.json';
 
 // Interfaces
@@ -33,6 +33,12 @@ interface University {
   departments: Department[];
 }
 
+// Turkish-safe lowercase helper function
+const trLower = (str: string): string => {
+  if (!str) return '';
+  return str.replace(/İ/g, 'i').replace(/I/g, 'ı').toLocaleLowerCase('tr-TR');
+};
+
 // Department categories mapping for structured filtering
 interface DeptCategory {
   id: string;
@@ -41,17 +47,123 @@ interface DeptCategory {
 }
 
 const DEPT_CATEGORIES: DeptCategory[] = [
-  { id: 'all', label: 'Tümü' },
-  { id: 'mühendislik', label: 'Mühendislik', keywords: ['mühendisliği'] },
-  { id: 'saglik', label: 'Tıp & Sağlık', keywords: ['tıp', 'diş hekimliği', 'çocuk gelişimi'] },
-  { id: 'hukuk', label: 'Hukuk & Adalet', keywords: ['hukuk', 'adalet'] },
-  { id: 'egitim', label: 'Öğretmenlik / Eğitim', keywords: ['öğretmenliği'] },
-  { id: 'havacilik', label: 'Pilotaj & Havacılık', keywords: ['pilotaj', 'oyun tasarımı'] },
-  { id: 'isletme', label: 'İşletme & İktisat', keywords: ['işletme', 'iktisat'] },
-  { id: 'sosyal', label: 'Psikoloji & Sosyal Bilimler', keywords: ['psikoloji', 'sosyal bilimler'] },
+  { id: 'all', label: 'Tüm Bölüm Alanları' },
+  {
+    id: 'muhendislik',
+    label: 'Mühendislik & Bilişim',
+    keywords: ['mühendis', 'yazılım', 'bilişim', 'yapay zeka', 'bilgisayar', 'elektronik', 'makine', 'endüstri', 'inşaat', 'mekatronik']
+  },
+  {
+    id: 'tip_saglik',
+    label: 'Tıp, Diş & Sağlık',
+    keywords: ['tıp', 'diş hekim', 'eczacı', 'hemşire', 'fizyoterapi', 'beslenme', 'ebelik', 'sağlık', 'odyoloji', 'çocuk gelişimi', 'veteriner']
+  },
+  {
+    id: 'hukuk',
+    label: 'Hukuk & Adalet',
+    keywords: ['hukuk', 'adalet']
+  },
+  {
+    id: 'isletme_iktisat',
+    label: 'İşletme, İktisat & Finans',
+    keywords: ['işletme', 'iktisat', 'ekonomi', 'maliye', 'finans', 'pazarlama', 'muhasebe', 'uluslararası ticaret', 'yönetim bilişim']
+  },
+  {
+    id: 'egitim',
+    label: 'Öğretmenlik & Eğitim',
+    keywords: ['öğretmen', 'eğitim', 'rehberlik', 'pedagoji']
+  },
+  {
+    id: 'mimarlik_tasarim',
+    label: 'Mimarlık & Tasarım',
+    keywords: ['mimar', 'tasarım', 'iç mimar', 'peyzaj', 'şehir ve bölge']
+  },
+  {
+    id: 'iletisim',
+    label: 'İletişim & Medya',
+    keywords: ['iletişim', 'gazeteci', 'halkla ilişkiler', 'radyo', 'televizyon', 'sinema', 'medya', 'reklam']
+  },
+  {
+    id: 'sosyal_psikoloji',
+    label: 'Psikoloji & Sosyal Bilimler',
+    keywords: ['psikoloji', 'sosyoloji', 'felsefe', 'tarih', 'uluslararası ilişkiler', 'siyaset', 'sosyal hizmet']
+  },
+  {
+    id: 'havacilik',
+    label: 'Havacılık & Uzay',
+    keywords: ['pilotaj', 'havacılık', 'uçak', 'uzay', 'hava trafik']
+  },
+  {
+    id: 'ilahiyat',
+    label: 'İlahiyat & İslami İlimler',
+    keywords: ['ilahiyat', 'islami ilim']
+  },
+  {
+    id: 'fen_temel',
+    label: 'Temel Bilimler (Fen/Matematik)',
+    keywords: ['matematik', 'fizik', 'kimya', 'biyoloji', 'istatistik', 'moleküler biyoloji']
+  },
+  {
+    id: 'guzel_sanatlar',
+    label: 'Güzel Sanatlar & Konservatuvar',
+    keywords: ['konservatuvar', 'müzik', 'resim', 'tiyatro', 'heykel', 'grafik', 'sahne sanatları', 'gastronomi']
+  }
 ];
 
+// Faculty categories mapping for structured filtering
+interface FacultyCategory {
+  id: string;
+  label: string;
+  keywords?: string[];
+}
+
+const FACULTY_CATEGORIES: FacultyCategory[] = [
+  { id: 'all', label: 'Tüm Fakülte Türleri' },
+  { id: 'tip', label: 'Tıp Fakülteleri', keywords: ['tıp'] },
+  { id: 'dis', label: 'Diş Hekimliği Fakülteleri', keywords: ['diş'] },
+  { id: 'eczacilik', label: 'Eczacılık Fakülteleri', keywords: ['eczac'] },
+  { id: 'saglik', label: 'Sağlık Bilimleri Fakülteleri / YO', keywords: ['sağlık'] },
+  { id: 'muhendislik', label: 'Mühendislik ve Teknoloji Fakülteleri', keywords: ['mühendis', 'teknoloji', 'bilgisayar ve bilişim'] },
+  { id: 'hukuk', label: 'Hukuk Fakülteleri', keywords: ['hukuk'] },
+  { id: 'iibf', label: 'İİBF / İşletme / İktisat Fakülteleri', keywords: ['iktisad', 'iktisat', 'işletme', 'siyasal', 'yönetim'] },
+  { id: 'egitim', label: 'Eğitim / Eğitim Bilimleri Fakülteleri', keywords: ['eğitim'] },
+  { id: 'mimarlik', label: 'Mimarlık ve Tasarım Fakülteleri', keywords: ['mimar', 'tasarım', 'sanat ve tasarım'] },
+  { id: 'iletisim', label: 'İletişim Fakülteleri', keywords: ['iletişim'] },
+  { id: 'fen_edebiyat', label: 'Fen / Edebiyat / İnsani Bilimler Fakülteleri', keywords: ['fen', 'edebiyat', 'insan ve toplum', 'sosyal ve beşeri'] },
+  { id: 'ilahiyat', label: 'İlahiyat / İslami İlimler Fakülteleri', keywords: ['ilahiyat', 'islami'] },
+  { id: 'havacilik', label: 'Havacılık ve Uzay Bilimleri', keywords: ['havacılık', 'uzay'] },
+  { id: 'guzel_sanatlar', label: 'Güzel Sanatlar / Konservatuvar', keywords: ['güzel sanat', 'konservatuvar'] },
+  { id: 'myo', label: 'Meslek Yüksekokulları (MYO)', keywords: ['meslek yüksek', 'myo'] }
+];
+
+// City aggregation for dynamic city dropdown
+const cityCounts = (universitiesData as University[]).reduce<Record<string, number>>((acc, u) => {
+  acc[u.city] = (acc[u.city] || 0) + 1;
+  return acc;
+}, {});
+
+const allCities = Object.keys(cityCounts).sort((a, b) => a.localeCompare(b, 'tr'));
+
 export default function App() {
+  // Theme State (light | dark)
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('whichuni_theme');
+      if (saved === 'dark' || saved === 'light') return saved;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('whichuni_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
   // Navigation & View State
   const [viewMode, setViewMode] = useState<'home' | 'details'>('home');
   const [selectedUniId, setSelectedUniId] = useState<string | null>(null);
@@ -59,19 +171,29 @@ export default function App() {
 
   // Filters State
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCity, setSelectedCity] = useState('all'); // 'all', 'İstanbul', 'Giresun'
+  const [selectedCity, setSelectedCity] = useState('all');
   const [selectedType, setSelectedType] = useState('all'); // 'all', 'Devlet', 'Vakıf'
   const [selectedLevel, setSelectedLevel] = useState('all'); // 'all', 'Lisans', 'Önlisans'
   const [selectedFaculty, setSelectedFaculty] = useState('all');
   const [selectedDeptCategory, setSelectedDeptCategory] = useState('all');
 
-  // Extract unique faculties dynamically from the dataset to populate select filter
-  const allFaculties = Array.from(
-    new Set(
-      (universitiesData as University[])
-        .flatMap(uni => uni.departments.map(d => d.faculty))
-    )
-  ).sort();
+  // Check if any filter is active
+  const hasActiveFilters =
+    searchTerm.trim() !== '' ||
+    selectedCity !== 'all' ||
+    selectedType !== 'all' ||
+    selectedLevel !== 'all' ||
+    selectedFaculty !== 'all' ||
+    selectedDeptCategory !== 'all';
+
+  const resetFilters = () => {
+    setSearchTerm('');
+    setSelectedCity('all');
+    setSelectedType('all');
+    setSelectedLevel('all');
+    setSelectedFaculty('all');
+    setSelectedDeptCategory('all');
+  };
 
   // Filter Pipeline
   const filteredUniversities: University[] = (universitiesData as University[]).map(uni => {
@@ -86,33 +208,42 @@ export default function App() {
     }
 
     // 3. Filter Departments inside the university
-    const query = searchTerm.toLowerCase().trim();
+    const query = trLower(searchTerm.trim());
     const matchedDepts = uni.departments.filter(dept => {
-      // Search matching term
+      // Search matching term (university name, department name, faculty, or code)
       const matchesSearch = query === '' ||
-        uni.name.toLowerCase().includes(query) ||
-        dept.name.toLowerCase().includes(query) ||
+        trLower(uni.name).includes(query) ||
+        trLower(dept.name).includes(query) ||
+        trLower(dept.faculty).includes(query) ||
         dept.code.includes(query);
 
       // Program Level match
       const matchesLevel = selectedLevel === 'all' || dept.degree === selectedLevel;
 
-      // Faculty match
-      const matchesFaculty = selectedFaculty === 'all' || dept.faculty === selectedFaculty;
+      // Faculty cluster match
+      let matchesFaculty = true;
+      if (selectedFaculty !== 'all') {
+        const facCat = FACULTY_CATEGORIES.find(f => f.id === selectedFaculty);
+        if (facCat && facCat.keywords) {
+          const deptFaculty = trLower(dept.faculty);
+          matchesFaculty = facCat.keywords.some(kw => deptFaculty.includes(trLower(kw)));
+        }
+      }
 
       // Dept category match
       let matchesCategory = true;
       if (selectedDeptCategory !== 'all') {
         const cat = DEPT_CATEGORIES.find(c => c.id === selectedDeptCategory);
         if (cat && cat.keywords) {
-          matchesCategory = cat.keywords.some(kw => dept.name.toLowerCase().includes(kw));
+          const deptName = trLower(dept.name);
+          matchesCategory = cat.keywords.some(kw => deptName.includes(trLower(kw)));
         }
       }
 
       return matchesSearch && matchesLevel && matchesFaculty && matchesCategory;
     });
 
-    // Exclude university card if filters are active but no departments match
+    // Exclude university card if search or department-level filters are active and no depts match
     const hasSearchOrFilters = query !== '' || selectedLevel !== 'all' || selectedFaculty !== 'all' || selectedDeptCategory !== 'all';
     if (hasSearchOrFilters && matchedDepts.length === 0) {
       return null;
@@ -197,14 +328,47 @@ export default function App() {
       {/* Main Branding Header */}
       <header>
         <div className="header-container">
-          <div className="logo-section">
+          <div className="header-left">
+            <div className="logo-section" onClick={handleBackToHome} style={{ cursor: 'pointer' }}>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent-color)' }}>
               <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
               <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
             </svg>
             <h1>which<span>uni</span></h1>
           </div>
-          <div className="tagline">Akademik Tercih ve YÖK Atlas Öğrenci Dağılım İstatistikleri Portalı</div>
+            <div className="tagline">Akademik Tercih ve YÖK Atlas Öğrenci Dağılım İstatistikleri Portalı</div>
+          </div>
+
+          <button
+            className="theme-toggle-btn"
+            onClick={toggleTheme}
+            aria-label={theme === 'light' ? 'Koyu temaya geç' : 'Açık temaya geç'}
+            title={theme === 'light' ? 'Koyu temaya geç' : 'Açık temaya geç'}
+          >
+            {theme === 'light' ? (
+              <>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+                <span>Koyu Tema</span>
+              </>
+            ) : (
+              <>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <span>Açık Tema</span>
+              </>
+            )}
+          </button>
         </div>
       </header>
 
@@ -233,29 +397,21 @@ export default function App() {
 
               {/* Multi-parameter filter options */}
               <div className="filters-wrapper">
-                {/* City Filter */}
-                <div className="filter-group">
+                {/* City Filter Dropdown */}
+                <div className="filter-group" style={{ minWidth: '180px', flex: '1 1 180px' }}>
                   <span className="filter-label">İl Seçimi</span>
-                  <div className="filter-buttons">
-                    <button
-                      className={`btn-filter ${selectedCity === 'all' ? 'active' : ''}`}
-                      onClick={() => setSelectedCity('all')}
-                    >
-                      Tümü
-                    </button>
-                    <button
-                      className={`btn-filter ${selectedCity === 'İstanbul' ? 'active' : ''}`}
-                      onClick={() => setSelectedCity('İstanbul')}
-                    >
-                      İstanbul
-                    </button>
-                    <button
-                      className={`btn-filter ${selectedCity === 'Giresun' ? 'active' : ''}`}
-                      onClick={() => setSelectedCity('Giresun')}
-                    >
-                      Giresun
-                    </button>
-                  </div>
+                  <select
+                    className="filter-select"
+                    value={selectedCity}
+                    onChange={(e) => setSelectedCity(e.target.value)}
+                  >
+                    <option value="all">Tüm İller ({allCities.length} İl / Bölge)</option>
+                    {allCities.map(city => (
+                      <option key={city} value={city}>
+                        {city} ({cityCounts[city]} Üni)
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 {/* University Type Filter */}
@@ -308,28 +464,25 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Advanced Select Filter: Faculty */}
-                <div className="filter-group" style={{ minWidth: '180px', flex: 1 }}>
-                  <span className="filter-label">Fakülte Seçimi</span>
+                {/* Advanced Select Filter: Faculty Cluster */}
+                <div className="filter-group" style={{ minWidth: '200px', flex: '1 1 200px' }}>
+                  <span className="filter-label">Fakülte Türü</span>
                   <select
-                    className="search-input"
-                    style={{ padding: '0.45rem 1rem', fontSize: '0.85rem' }}
+                    className="filter-select"
                     value={selectedFaculty}
                     onChange={(e) => setSelectedFaculty(e.target.value)}
                   >
-                    <option value="all">Tüm Fakülteler</option>
-                    {allFaculties.map(faculty => (
-                      <option key={faculty} value={faculty}>{faculty}</option>
+                    {FACULTY_CATEGORIES.map(fac => (
+                      <option key={fac.id} value={fac.id}>{fac.label}</option>
                     ))}
                   </select>
                 </div>
 
                 {/* Advanced Select Filter: Department category groups */}
-                <div className="filter-group" style={{ minWidth: '180px', flex: 1 }}>
-                  <span className="filter-label">Bölüm Kategorisi</span>
+                <div className="filter-group" style={{ minWidth: '200px', flex: '1 1 200px' }}>
+                  <span className="filter-label">Bölüm Alanı</span>
                   <select
-                    className="search-input"
-                    style={{ padding: '0.45rem 1rem', fontSize: '0.85rem' }}
+                    className="filter-select"
                     value={selectedDeptCategory}
                     onChange={(e) => setSelectedDeptCategory(e.target.value)}
                   >
@@ -338,6 +491,23 @@ export default function App() {
                     ))}
                   </select>
                 </div>
+
+                {/* Reset Filters button if any filter is active */}
+                {hasActiveFilters && (
+                  <div className="filter-group" style={{ justifyContent: 'flex-end' }}>
+                    <button
+                      className="btn-reset-filters"
+                      onClick={resetFilters}
+                      title="Tüm filtreleri varsayılana sıfırla"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                      Filtreleri Temizle
+                    </button>
+                  </div>
+                )}
               </div>
             </section>
 
@@ -350,7 +520,12 @@ export default function App() {
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
                   </svg>
                   <p style={{ fontSize: '1.1rem', fontWeight: 700, marginTop: '1rem' }}>Filtrelere uygun üniversite bulunamadı.</p>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Lütfen filtre tercihlerinizi değiştirmeyi deneyin.</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1.25rem' }}>Lütfen filtre tercihlerinizi değiştirmeyi veya aramayı genişletmeyi deneyin.</p>
+                  {hasActiveFilters && (
+                    <button className="btn-back" style={{ margin: '0 auto' }} onClick={resetFilters}>
+                      Filtreleri Sıfırla
+                    </button>
+                  )}
                 </div>
               ) : (
                 filteredUniversities.map((uni) => (
@@ -420,7 +595,7 @@ export default function App() {
                       {currentUni.type}
                     </span>
                   </div>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{currentUni.city} Eyaleti / Tercih Merkezi Yerleşkesi</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{currentUni.city} / Tercih Merkezi Yerleşkesi</p>
                 </div>
 
                 <div className="profile-details-grid">
@@ -473,7 +648,7 @@ export default function App() {
                                 cy="50"
                                 r={radius}
                                 fill="transparent"
-                                stroke="#b8860b" // gold accent for female
+                                stroke="var(--accent-color)" // accent for female
                                 strokeWidth="12"
                               />
                               {/* Foreground circle (Male) */}
@@ -482,7 +657,7 @@ export default function App() {
                                 cy="50"
                                 r={radius}
                                 fill="transparent"
-                                stroke="#0b2240" // primary blue for male
+                                stroke="var(--primary-color)" // primary for male
                                 strokeWidth="12"
                                 strokeDasharray={circumference}
                                 strokeDashoffset={maleOffset}
@@ -531,7 +706,7 @@ export default function App() {
                                   <span style={{ color: 'var(--primary-color)' }}>{fac.name}</span>
                                   <span style={{ color: 'var(--text-muted)' }}>{fac.count} Öğrenci</span>
                                 </div>
-                                <div className="visual-bar-container" style={{ height: '14px', backgroundColor: '#e2e8f0' }}>
+                                <div className="visual-bar-container" style={{ height: '14px', backgroundColor: 'var(--bar-bg)' }}>
                                   <div
                                     style={{
                                       width: `${fillWidth}%`,
@@ -555,12 +730,12 @@ export default function App() {
                             <span>Lisans: {stats.lisansCount} Öğrenci (%{stats.lisansPercent})</span>
                             <span>Önlisans: {stats.onlisansCount} Öğrenci (%{stats.onlisansPercent})</span>
                           </div>
-                          <div className="visual-bar-container" style={{ height: '24px', backgroundColor: '#e2e8f0', borderRadius: '4px' }}>
+                          <div className="visual-bar-container" style={{ height: '24px', backgroundColor: 'var(--bar-bg)', borderRadius: '4px' }}>
                             {stats.lisansPercent > 0 && (
                               <div
                                 style={{
                                   width: `${stats.lisansPercent}%`,
-                                  backgroundColor: '#1b8a5a', // Green for Lisans
+                                  backgroundColor: 'var(--devlet-color)',
                                   color: '#ffffff',
                                   fontSize: '0.75rem',
                                   fontWeight: 800,
