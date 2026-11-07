@@ -152,3 +152,4 @@ Proje GitHub Actions ile otomatik olarak GitHub Pages üzerinde barındırılmak
 
 Bu proje açık kaynaklıdır ve eğitim/tercih rehberliği amaçlı kullanıma uygundur.
 Veriler [YÖK Atlas](https://yokatlas.yok.gov.tr/) açık verilerinden derlenmiştir.
+
